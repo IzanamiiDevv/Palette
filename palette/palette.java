@@ -87,8 +87,10 @@ public class palette {
                 return "";
             }
 
-            
-            return "";
+            String _red = Integer.toString(red);
+            String _green = Integer.toString(green);
+            String _blue = Integer.toString(blue);
+            return String.format("\u001b[38;2;%s;%s;%sm", _red, _green, _blue);
         }
 
         public static String GrayScale(int intensity) {
@@ -105,6 +107,10 @@ public class palette {
     }
 
     public static void resetAll() {
+        System.out.print(RESET);
+    }
 
+    public static String setStyle(String Style, String Text) {
+        return Style + Text + RESET;
     }
 }
