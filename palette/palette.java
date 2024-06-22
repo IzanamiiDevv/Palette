@@ -173,7 +173,7 @@ public class palette {
             return String.format("\u001b[38;5;%sm", Integer.toString(initial));
         }
 
-        public static String getANSII(int value) {
+        public static String getANSI(int value) {
             int initial = 0;
             initial += value;
 
@@ -182,7 +182,7 @@ public class palette {
             return String.format("\u001b[38;5;%sm", Integer.toString(initial));
         }
 
-        public static String getBG_ANSII(int value) {
+        public static String getBG_ANSI(int value) {
             int initial = 0;
             initial += value;
 

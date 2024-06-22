@@ -11,7 +11,7 @@ public class main {
 
         System.out.println(palette.setStyle(colors.RGB(30, 160, 240), "Colors!"));
 
-        String rainbow = colors.BG_RED + "R" + colors.getBG_ANSII(202) + "A" + colors.BG_YELLOW + "I" + colors.BG_GREEN + "N" + colors.getBG_ANSII(211) + "B" + colors.BG_BLUE + "O" + colors.BG_PURPLE + "W" + palette.RESET;
+        String rainbow = colors.BG_RED + "R" + colors.getBG_ANSI(202) + "A" + colors.BG_YELLOW + "I" + colors.BG_GREEN + "N" + colors.getBG_ANSI(211) + "B" + colors.BG_BLUE + "O" + colors.BG_PURPLE + "W" + palette.RESET;
         System.out.println(rainbow);
     }
 }
