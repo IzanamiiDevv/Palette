@@ -173,6 +173,24 @@ public class palette {
             return String.format("\u001b[38;5;%sm", Integer.toString(initial));
         }
 
+        public static String getANSII(int value) {
+            int initial = 0;
+            initial += value;
+
+            if(initial > 255)
+                initial = 255;
+            return String.format("\u001b[38;5;%sm", Integer.toString(initial));
+        }
+
+        public static String getBG_ANSII(int value) {
+            int initial = 0;
+            initial += value;
+
+            if(initial > 255)
+                initial = 255;
+            return String.format("\u001b[48;5;%sm", Integer.toString(initial));
+        }
+
         public static String BG_RGB(int red, int green, int blue) {
             if(red < 0 || red > 255 || green < 0 || green > 255 || blue < 0 || blue > 255) {
                 System.err.println("Invalid RGB values should be ranged [ 0 - 255 ]");
@@ -182,17 +200,17 @@ public class palette {
             String _red = Integer.toString(red);
             String _green = Integer.toString(green);
             String _blue = Integer.toString(blue);
-            return String.format("\u001b[38;2;%s;%s;%sm", _red, _green, _blue);
+            return String.format("\u001b[48;2;%s;%s;%sm", _red, _green, _blue);
         }
 
         public static String BG_GrayScale(int scale) {
             int initial = 232;
-            initial += 0;
+            initial += scale;
             
             if(initial > 255)
                 initial = 255;
             
-            return String.format("\u001b[38;5;%sm", Integer.toString(initial));
+            return String.format("\u001b[48;5;%sm", Integer.toString(initial));
         }
     }
 
